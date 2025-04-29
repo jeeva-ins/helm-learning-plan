@@ -129,4 +129,5 @@ tolerations: []
 
 affinity: {}
 volumeClaimTemplates:
+  name: nginx-vol
   storage: 1Gi

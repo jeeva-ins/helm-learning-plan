@@ -20,11 +20,12 @@ spec:
         - containerPort: 80
           name: web
         volumeMounts:
-        - name: nginx-vol
+        - name: {{ .Values.volumeClaimTemplates.name}}
           mountPath: /usr/share/nginx/html
 volumeClaimTemplates:
+
   - metadata:
-      name: nginx-vol
+      name:  {{ .Values.volumeClaimTemplates.name}}
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
