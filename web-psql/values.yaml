@@ -136,6 +136,9 @@ postgresql:
 # Values for the deployment of the configmap for the postgresql
     configmap:
       name: postgres-configmap
+      
+configmap:
+      name: postgres-configmap
 
 # Values for the deployment of your app
 app:
