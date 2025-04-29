@@ -22,13 +22,14 @@ spec:
         volumeMounts:
         - name: {{ .Values.volumeClaimTemplates.name}}
           mountPath: /usr/share/nginx/html
-volumeClaimTemplates:
+  volumeClaimTemplates:
+    - metadata:
+        name:  {{ .Values.volumeClaimTemplates.name}}
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: {{ .Values.volumeClaimTemplates.storage}}
+    
 
-  - metadata:
-      name:  {{ .Values.volumeClaimTemplates.name}}
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: {{ .Values.volumeClaimTemplates.storage}}
 
