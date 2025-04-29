@@ -1,11 +1,12 @@
 apiVersion: v2
-name: sample-sts-chart
-description: A Helm chart for Kubernetes Stateful set
+name: sample-chart
+description: A Helm chart for Kubernetes
 dependencies:
-  - name: mariadb
-    repository: https://charts.bitnami.com/bitnami
-    version: ~20.3
-    condition: mariadb.enabled
+  - name: postgresql
+    version: 12.1.9
+    repository: "https://charts.bitnami.com/bitnami"
+    tags:
+      - database
 
 # A chart can be either an 'application' or a 'library' chart.
 #
