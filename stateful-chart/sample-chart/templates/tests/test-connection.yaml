@@ -9,5 +9,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{  .Value.name  }}:{{ .Values.service.port }}']
+      args: ['{{  .Chart.name  }}:{{ .Values.service.port }}']
   restartPolicy: Never
