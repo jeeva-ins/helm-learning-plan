@@ -128,6 +128,7 @@ postgresql:
     auth:
         password: postgrespassword
         username: postgres
+        port: 5432
 
     commonLabels:
         name: postgres
