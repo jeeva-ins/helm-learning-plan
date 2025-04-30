@@ -1,12 +1,8 @@
 apiVersion: v2
-name: sample-chart
+name: parentchart
 description: A Helm chart for Kubernetes
-dependencies:
-  - name: postgresql
-#   version: 12.1.9
-#   repository: "https://charts.bitnami.com/bitnami"
-    tags:
-      - database
+dependencies: 
+  - name: childchart
 
 # A chart can be either an 'application' or a 'library' chart.
 #

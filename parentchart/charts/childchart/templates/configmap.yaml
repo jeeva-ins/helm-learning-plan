@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-cfgmap
+data:
+  user: {{ .Values.user }}
+  guser: {{ .Values.global.guser }}
